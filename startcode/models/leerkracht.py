@@ -2,6 +2,8 @@
 Leerkracht - Subklasse van Karakter.
 Demonstreert overerving en method overriding.
 """
+import self
+
 from models.karakter import Karakter
 from config import COLORS
 
@@ -27,5 +29,5 @@ class Leerkracht(Karakter):
         METHOD OVERRIDING: we vervangen de parent methode en hergebruiken deze met super().
         """
         # TODO Oefening 1: Roep super().beschrijf() aan en voeg vakinformatie toe
-        pass
-
+       basis = super().beschrijf()
+    return f"{basis} - leerkracht {self.vak}"
